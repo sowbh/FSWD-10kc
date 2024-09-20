@@ -1,0 +1,9 @@
+1. Try previous codes in vs code and run on live server
+2. Make Documentation on URL
+
+ Research : 
+
+1. htm vs html
+2. Different types of domains 
+3. Vs code shortcuts 
+4. Difference between absolute and relative path.

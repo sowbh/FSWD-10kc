@@ -1,0 +1,9 @@
+1.Take the previously used resume task and bold your name,education,skills,objective,hobbies,projects etc and underline it using formatting tags.
+2.Create an album of any movie using img and audio tag in the format;
+
+                           Album_name
+
+    Img1           Img2          Img3         Img4
+    Song_name      Song_name     Song_name    Song_name
+    Audio_tag      Audio_tag     Audio_tag    Audio_tag
+    Download       Download      Download     Download

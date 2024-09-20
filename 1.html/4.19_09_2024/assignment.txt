@@ -1,0 +1,2 @@
+1. Create a full stack technologies with their images. If you click on the logo that respective decsription has to be opened and provide a download link below each of them.
+2. Create a html tutorial file using geeksforgeeks till tables tag. (Html bookmarking topic).
