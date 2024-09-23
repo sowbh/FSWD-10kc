@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Bus Pass Application</title>
+</head>
+
+<body>
+    <!-- application heading -->
+    <fieldset>
+        <center><strong>General Bus Pass Application</strong></center>
+    </fieldset>
+    <br>
+
+    <!-- applicant details -->
+    <fieldset>
+        <legend>Applicant Details</legend>
+
+        <form action="" method="get">
+            <!-- name -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" maxlength="20" required>
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- father name -->
+            <label for="fathername">Father's/Guardian's Name:</label>
+            <input type="text" name="fathername" id="fathername" required><br>
+
+            <br><br>
+
+            <!-- date of birth -->
+            <label for="birthdate">Date of Birth(dd/mm/yyyy):</label>
+            <input type="date" name="date" id="birthdate" required>
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- gender -->
+            <label for="gender">Gender:</label>
+            <!-- for female -->
+            <input type="radio" name="gender" id="female" required>
+            <label for="female">Female</label>
+            <!-- for male -->
+            <input type="radio" name="gender" id="male" required>
+            <label for="male">Male</label><br>
+
+            <br><br>
+
+            <!-- age as on -->
+            <label for="age">Age As on:</label>
+            <input type="number" name="years" id="years" min="0" required>
+            <label for="years">year(s)</label>
+
+            <input type="number" name="months" id="months" min="0" max="11" required>
+            <label for="months">month(s)</label>
+
+            <input type="number" name="days" id="days" min="0" max="30" required>
+            <label for="days">day(s)</label>
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- aadhaar no -->
+            <!-- pattern attribute is used to specify a regular expression that the input value must match for the form to be submitted -->
+            <!-- \d represents any digit (0-9)
+             {12} indicates that exactly 12 of the preceding token (\d) are required -->
+            <label for="aadhaar">Aadhaar no:</label>
+            <input type="text" name="aadhaar" id="aadhaar" pattern="\d{12}" required><br>
+
+            <br><br>
+
+            <!-- mobile no -->
+            <!-- type="tel": allows for telephone numbers  -->
+            <label for="mobile">Mobile no:</label>
+            <input type="tel" name="mobile" id="mobile" pattern="\d{10}" required>
+
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- email id -->
+            <label for="email">Email id:</label>
+            <input type="email" name="email" id="email" required><br>
+
+            <br><br>
+
+            <!-- add photo -->
+            <!-- type="file" input allows users to upload files from their device -->
+            <label for="photo">Photo:</label>
+            <input type="file" name="photo" id="photo" required>
+
+        </form>
+    </fieldset>
+    <br>
+
+    <!-- residential address details -->
+    <fieldset>
+        <legend>Residential Address Details</legend>
+        <form action="" method="get">
+            <!-- applicant's address -->
+            <label for="address">Applicant's Address:</label>
+            <textarea name="address" id="address" rows="4" cols="50" maxlength="20" required></textarea>
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- district -->
+            <label for="district">District:</label>
+            <!-- select and option for dropdown -->
+            <select name="district" id="district" required>
+                <option value="vijayanagara">Vijayanagara</option>
+                <option value="bellari">Bellari</option>
+                <option value="koppal">Koppal</option>
+                <option value="davangere">Davangere</option>
+                <option value="gadag">Gadag</option>
+            </select><br>
+
+            <br><br>
+
+            <!-- mandal -->
+            <label for="mandal">Mandal:</label>
+            <!-- select and option for dropdown -->
+            <select name="mandal" id="mandal" required>
+                <option value="vijayanagara">Vijayanagara</option>
+                <option value="bellari">Bellari</option>
+                <option value="koppal">Koppal</option>
+                <option value="davangere">Davangere</option>
+                <option value="gadag">Gadag</option>
+            </select>
+
+            <!-- space between fields -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <!-- village -->
+            <label for="village">Village:</label>
+            <!-- select and option for dropdown -->
+            <select name="village" id="village" required>
+                <option value="hospet">Hospet</option>
+                <option value="torangallu">Torangallu</option>
+                <option value="koppal">Koppal</option>
+                <option value="davangere">Davangere</option>
+                <option value="gadag">Gadag</option>
+            </select><br>
+
+            <br><br>
+
+            <!-- pincode -->
+            <label for="pincode">Pincode:</label>
+            <input type="text" name="pincode" id="pincode" pattern="\d{6}" required>
+
+        </form>
+    </fieldset>
+    <br>
+
+    <!-- pass type details -->
+    <fieldset>
+        <legend>Pass Type Details</legend>
+        <form action="" method="get">
+            <!-- city -->
+            <label for="city">City:</label>
+            <select name="city" id="city" required>
+                <option value="hospet">Hospet</option>
+                <option value="bellari">Bellari</option>
+                <option value="koppal">Koppal</option>
+                <option value="davangere">Davangere</option>
+                <option value="gadag">Gadag</option>
+            </select><br>
+
+            <br><br>
+
+            <!-- pass type -->
+            <!-- disabled attribute:prevents the option from being selected
+             value="" => empty string -->
+            <label for="pass_type">Pass Type:</label>
+            <select name="pass_type" id="pass_type" required>
+                <option value="" disabled selected>----Select----</option>
+                <option value="greater_pass">GREATER PASS</option>
+                <option value="general_ordinary">GENERAL ORDINARY ROUTE PASS MTLY</option>
+                <option value="general_metro">GENERAL METRO EXPRESS ROUTE PASS MTLY</option>
+                <option value="ordinary_pass">ORDINARY PASS</option>
+                <option value="metro_express">METRO EXPRESS PASS</option>
+                <option value="metro_deluxe">METRO DELUXE PASS</option>
+            </select>
+
+        </form>
+    </fieldset>
+    <br>
+
+    <!-- mode of payment and pass collection -->
+    <fieldset>
+        <legend>Mode of Payment and Pass collection</legend>
+        <form action="" method="get">
+            <!-- payment mode -->
+            <label for="payment">Payment mode:</label>
+            <select name="payment" id="payment" required>
+                <option value="" disabled selected>Select Payment Mode</option>
+                <option value="at_counter">Payment at Counter</option>
+            </select><br>
+
+            <br><br>
+
+            <!-- pass delivery mode -->
+            <label for="delivery">Pass Delivery Mode:</label>
+            <select name="delivery" id="delivery" required>
+                <option value="" disabled selected>Select Pass Delivery Mode</option>
+                <option value="Counter">At Counter</option>
+            </select><br>
+
+            <br><br>
+
+            <!-- center at which you want to Collect Pass -->
+            <label for="center">Center at which you want to Collect Pass</label>
+            <select name="center" id="center" required>
+                <option value="" disabled selected>----Select----</option>
+                <option value="hospet">RTC-Hospet[23/09/2024]</option>
+                <option value="bellari">RTC-Bellari[23/09/2024]</option>
+                <option value="koppal">RTC-Koppal[23/09/2024]</option>
+                <option value="davangere">RTC-Davangere[23/09/2024]</option>
+                <option value="gadag">RTC-Gadag[23/09/2024]</option>
+            </select>
+        </form>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <center>
+            <input type="submit" value="Submit">
+        </center>
+    </fieldset>
+
+</body>
+
+</html>
