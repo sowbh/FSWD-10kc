@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Attributes and Datalist Example</title>
+</head>
+<body>
+    <h1>Form Example Using Different Input Types:</h1>
+    <hr>
+    <!-- form with various input types -->
+    <form action="" method="get">
+        <!-- input type="number" for numeric input -->
+        <label for="age">Enter your age (between 18 and 60):</label>
+        <input type="number" id="age" name="age" min="18" max="60" step="1" required>
+        <br><br>
+
+        <!-- input type="reset" to reset the form -->
+        <button type="reset">Reset Form</button>
+        <br><br>
+
+        <!-- input with datalist for autocomplete suggestions -->
+        <label for="browser">Choose your favorite browser:</label>
+
+        <!-- list attribute should match the id of the associated datalist  -->
+        <input list="browsers" id="browser" name="browser">
+
+        <!-- datalist with predefined options -->
+        <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Mozilla Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+        <br><br>
+
+        <!-- select tag for predefined options (dropdown) -->
+        <label for="country">Choose your country:</label>
+
+        <select id="country" name="country">
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="India">India</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <br><br>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- select:You can only choose one of the predefined options and cannot enter your own value.
+    datalist:Provides suggestions, but you can still enter a custom value if none of the options fit your needs. -->
+
+</body>
+</html>

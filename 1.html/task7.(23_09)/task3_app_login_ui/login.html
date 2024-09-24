@@ -16,12 +16,12 @@
             <form action="./loginSuccessful.html" method="get">
                 <!-- username -->
                 <label for="username">Username:</label>
-                <input type="text" name="username" placeholder="Enter your username" id="username" required><br>
+                <input type="text" name="username" placeholder="Enter your username" id="username" pattern="^[a-z]{3,8}(-[a-z]{1,7})?$" title="Username length should be between 3 to 8 characters, must be lowercase, and can contain one special symbol (-) only." required autocomplete="off" autofocus><br>
                 <br>
 
                 <!-- password -->
                 <label for="password">Password:</label>
-                <input type="text" name="password" placeholder="Enter your password" id="password" required><br>
+                <input type="text" name="password" placeholder="Enter your password" id="password" pattern="[a-zA-Z0-9\-]{6,20}" title="Password should contain lowercase, uppercase, numbers(0-9) with a special character(-)" required autocomplete="off" autofocus><br>
                 <br>
 
                 <!-- login => loginSuccessful.html (see form action) -->

@@ -17,9 +17,9 @@
         <center>
             <!-- forgot response -->
             <form action="./forgotResponse.html" method="get">
-                <!-- username or email -->
-                <label for="usernameEmail">Enter your username or email:</label>
-                <input type="text" name="usernameEmail" placeholder="Username or Email" id="usernameEmail" required><br>
+                <!-- username -->
+                <label for="username">Enter your username:</label>
+                <input type="text" name="username" placeholder="Enter your username" id="username" pattern="^[a-z]{3,8}(-[a-z]{1,7})?$" title="Username length should be between 3 to 8 characters, must be lowercase, and can contain one special symbol (-) only." required autocomplete="off" autofocus><br>
                 <br>
 
                 <!-- OTP field with pattern to restrict to exactly 6 digits -->
