@@ -18,35 +18,46 @@
 
         <!-- input field is designed to accept dates in the format YYYY-MM-DD only -->
         <input type="text" placeholder="YYYY-MM-DD"
-            pattern="^(?:19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|1\d|2[0-8]|29|30|31)$"
+            pattern="^(?:(19|20)\d\d)-(0[1-9]|1[0-2])-(0[1-9]|1\d|2[0-8])$|^(?:(19|20)([02468][048]|[13579][26])|2000)-02-29$|^(?:(19|20)\d\d)-(0[13-9]|1[0-2])-(29|30)$|^(?:(19|20)\d\d)-(0[13578]|1[02])-31$"
             title="Please enter a valid date in the format YYYY-MM-DD (e.g., 2023-09-15). Leap years are considered."
             id="eventDate" name="eventDate" required autofocus autocomplete="off"><br>
-        
+
         <br>
+
         <!-- Pattern Explanation:
-                    1. ^(?:19|20)\d{2} - Matches the year part:
-                        - (?:19|20) restricts the first part of the year to be either 19XX or 20XX (for years between 1900 and 2099).
-                        - \d{2} matches exactly two digits (so it can match any year like 1900-2099).
+                    1. ^(?:(19|20)\d\d) - Matches the year part:
+                        - (19|20) restricts the first two digits of the year to 19XX or 20XX.
+                        - \d\d matches the last two digits, so the entire year can be between 1900 and 2099.
 
                     2. -(0[1-9]|1[0-2]) - Matches the month part:
-                        - A literal hyphen (-) is required to separate the year from the month.
+                        - A literal hyphen (-) is required between the year and month.
                         - (0[1-9]|1[0-2]) matches valid months:
                           - 0[1-9] matches months 01 to 09.
                           - 1[0-2] matches months 10, 11, and 12.
 
-                    3. -(0[1-9]|1\d|2[0-8]|29|30|31) - Matches the day part:
+                    3. -(0[1-9]|1\d|2[0-8])$ - Matches valid days (for most months):
                         - Another literal hyphen (-) separates the month from the day.
-                        - (0[1-9]|1\d|2[0-8]) matches days 01 to 28 (valid for all months).
-                        - 29 matches the 29th day (which can be valid for some months and leap years).
-                        - 30 matches the 30th day (valid for months that have 30 days).
-                        - 31 matches the 31st day (valid only for months that have 31 days).
+                        - (0[1-9]|1\d|2[0-8]) matches days 01 to 28 (valid for all months except February in leap years).
 
-                    4. ^ - asserts the start of the string
-                    - $ - Ensures the string ends after matching the date pattern (no extra characters allowed). -->
+                    4. |^(?:(19|20)([02468][048]|[13579][26])|2000)-02-29$ - Matches February 29th (leap years):
+                        - (19|20) restricts the year to 1900–2099.
+                        - ([02468][048]|[13579][26]) matches leap years.
+                        - 2000 explicitly allows the year 2000 as a leap year.
+                        - 02-29 matches February 29th for leap years.
 
-        <!-- title attribute shows a custom message if the input doesn't match the pattern -->
+                    5. |^(?:(19|20)\d\d)-(0[13-9]|1[0-2])-(29|30)$ - Matches months with 29th or 30th day:
+                        - (0[13-9]|1[0-2]) matches months that can have 29 or 30 days (all except February).
+                        - (29|30) matches days 29 and 30.
 
-        <!-- submit button -->
+                    6. |^(?:(19|20)\d\d)-(0[13578]|1[02])-31$ - Matches months with 31st day:
+                        - (0[13578]|1[02]) matches months 01, 03, 05, 07, 08, 10, and 12 (which have 31 days).
+                        - 31 matches the 31st day.
+
+                    7. ^ - asserts the start of the string.
+                    8. $ - ensures the string ends after matching the date pattern, preventing extra characters.
+        -->
+
+        <!-- Submit button -->
         <button type="submit">Submit</button>
     </form>
 
