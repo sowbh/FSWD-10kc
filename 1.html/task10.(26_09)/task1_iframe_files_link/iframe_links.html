@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe links</title>
+</head>
+<body>
+    <!-- top section with logo and navigation links -->
+    <div>
+        <img src="./images/logo.png" alt="Logo" width="70px" height="70px">&nbsp;&nbsp;&nbsp;
+        
+        <!-- navigation links to load different pages in the iframe -->
+        <a href="./home.html" target="iframe">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="./about_us.html" target="iframe">About us</a>&nbsp;&nbsp;&nbsp;
+        <a href="./contact_us.html" target="iframe">Contact us</a>
+    </div>
+
+    <br>
+
+    <!-- iframe to display the content of the linked pages -->
+    <!-- frameborder="1" displays the border, if 0 then no border is displayed-->
+    <iframe src="./intro.html" frameborder="1" name="iframe" width="400px" height="300px"></iframe>
+</body>
+</html>
